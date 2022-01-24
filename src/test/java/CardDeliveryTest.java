@@ -25,7 +25,7 @@ public class CardDeliveryTest {
         String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
         $("[data-test-id=date] input").doubleClick().sendKeys(Keys. DELETE);
         $("[data-test-id=date] input").val(date);
-        $("[data-test-id=name] input").val("Ольга-Мария Петрова");
+        $("[data-test-id=name] input").val("Ольга-Мария Петрова ");
         $("[data-test-id=phone] input").val("+79104657452");
         $(By.className("checkbox__text")).click();
         $(withText("Забронировать")).click();
