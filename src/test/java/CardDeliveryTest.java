@@ -19,7 +19,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class CardDeliveryTest {
     @Test
     void shouldSendForm() {
-        Configuration.holdBrowserOpen=true;
         open("http://localhost:9999/");
         $("[data-test-id=city] input").setValue("Москва");
         String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
