@@ -19,6 +19,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class CardDeliveryTest {
     @Test
     void shouldSendForm() {
+        Configuration.holdBrowserOpen=true;
         Configuration.browserSize = "1920x1080";
         open("http://localhost:9999/");
         $("[data-test-id=city] input").setValue("Москва");
